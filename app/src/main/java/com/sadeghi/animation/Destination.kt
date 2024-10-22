@@ -9,4 +9,7 @@ import kotlinx.serialization.Serializable
 object Destination {
     @Serializable
     object Main
+
+    @Serializable
+    object Visibility
 }
