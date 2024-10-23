@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ComposeAnimations"
+rootProject.name = "JetpackComposeAnimations"
 include(":app")
  
