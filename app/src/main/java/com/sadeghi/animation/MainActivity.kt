@@ -23,13 +23,23 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(navController = navController, startDestination = Destination.Main) {
                         composable<Destination.Main> {
-                            MainScreen(modifier = Modifier.padding(innerPadding)) {
-                                navController.navigate(Destination.Visibility)
-                            }
+                            MainScreen(
+                                modifier = Modifier.padding(innerPadding),
+                                onVisibilityClick = {
+                                    navController.navigate(Destination.Visibility)
+                                },
+                                onContentClick = {
+                                    navController.navigate(Destination.Content)
+                                },
+                            )
                         }
 
                         composable<Destination.Visibility> {
                             VisibilityScreen()
+                        }
+
+                        composable<Destination.Content> {
+                            ContentScreen()
                         }
                     }
                 }

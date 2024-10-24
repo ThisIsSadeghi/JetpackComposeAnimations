@@ -26,7 +26,8 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun MainScreen(
     modifier: Modifier = Modifier,
-    onVisibleInvisibleClick: () -> Unit = {},
+    onVisibilityClick: () -> Unit = {},
+    onContentClick: () -> Unit = {},
 ) {
     Column(
         modifier = modifier.fillMaxSize().padding(16.dp),
@@ -43,8 +44,13 @@ fun MainScreen(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             item {
-                Button(modifier = Modifier.fillMaxWidth(), onClick = onVisibleInvisibleClick) {
+                Button(modifier = Modifier.fillMaxWidth(), onClick = onVisibilityClick) {
                     Text(modifier = Modifier.align(Alignment.CenterVertically), text = "Visibility")
+                }
+            }
+            item {
+                Button(modifier = Modifier.fillMaxWidth(), onClick = onContentClick) {
+                    Text(modifier = Modifier.align(Alignment.CenterVertically), text = "Content")
                 }
             }
         }

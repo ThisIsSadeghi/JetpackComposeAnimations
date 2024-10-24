@@ -12,4 +12,7 @@ object Destination {
 
     @Serializable
     object Visibility
+
+    @Serializable
+    object Content
 }
